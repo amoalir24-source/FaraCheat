@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download - Fara_Cheat</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.card{
+width:380px;
+padding:35px;
+text-align:center;
+animation:fade .7s ease;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.logo{
+width:170px;
+border-radius:20px;
+margin-bottom:15px;
+}
+
+h1{
+color:#fff;
+margin:10px 0;
+}
+
+p{
+color:#bbb;
+margin-bottom:20px;
+}
+
+.circle{
+width:110px;
+height:110px;
+border:8px solid #ffcc00;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:25px auto;
+box-shadow:0 0 20px rgba(255,204,0,.4);
+transition:.5s;
+}
+
+.circle span{
+font-size:38px;
+font-weight:bold;
+color:#fff;
+transition:.5s;
+}
+
+.loading{
+width:100%;
+height:8px;
+background:#2c2c2c;
+border-radius:30px;
+overflow:hidden;
+margin:25px 0;
+}
+
+.progress{
+width:0%;
+height:100%;
+background:linear-gradient(90deg,#ffcc00,#ffd93d);
+box-shadow:0 0 15px #ffcc00;
+animation:progress 10s linear forwards;
+}
+
+@keyframes progress{
+from{width:0%;}
+to{width:100%;}
+}
+
+.btn{
+display:block;
+width:100%;
+box-sizing:border-box;
+pointer-events:none;
+opacity:.5;
+transition:.4s;
+}
+
+.btn.active{
+pointer-events:auto;
+opacity:1;
+transform:scale(1.03);
+box-shadow:0 0 20px rgba(255,204,0,.6);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<img src="logo.png" class="logo">
+
+<h1>Fara_Cheat</h1>
+
+<p>Please wait while your download is prepared...</p>
+
+<div class="circle">
+<span id="timer">10</span>
+</div>
+
+<div class="loading">
+<div class="progress"></div>
+</div>
+
+<a id="downloadBtn"
+class="btn"
+href="https://github.com/amoalir24-source/Fara_Cheat/releases/download/V2/_.rar">
+⬇ Download Now
+</a>
+
+</div>
+
+<script>
+
+let time=10;
+
+const timer=document.getElementById("timer");
+const btn=document.getElementById("downloadBtn");
+const circle=document.querySelector(".circle");
+
+const countdown=setInterval(()=>{
+
+time--;
+
+timer.innerHTML=time;
+
+if(time<=0){
+
+clearInterval(countdown);
+
+circle.style.borderColor="#4CAF50";
+circle.style.boxShadow="0 0 20px rgba(76,175,80,.8)";
+
+timer.innerHTML="✓";
+timer.style.color="#4CAF50";
+
+btn.classList.add("active");
+
+// دانلود خودکار
+window.location.href=btn.href;
+
+}
+
+},1000);
+
+</script>
+
+</body>
+</html>

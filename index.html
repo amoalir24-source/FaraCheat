@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fara_Cheat</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="card">
+
+    <img src="logo.png" class="logo">
+
+    <h1>Fara_Cheat</h1>
+
+    <p>Cheat Free Minecraft</p>
+
+    <div class="btns">
+
+        <!-- دکمه دانلود -->
+        <a class="btn" href="download.html">Download</a>
+
+        <!-- حمایت مالی -->
+        <a class="btn" href="https://daramet.com/Fara_Cheat">Donat</a>
+
+        <!-- روبیکا -->
+        <a class="btn" href="https://rubika.ir/Fara_Cheat">Rubika</a>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+// غیرفعال کردن راست کلیک
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+});
+
+// غیرفعال کردن برخی کلیدهای میانبر
+document.addEventListener("keydown", function(e) {
+
+    // F12
+    if (e.key === "F12") {
+        e.preventDefault();
+    }
+
+    // Ctrl + Shift + I
+    if (e.ctrlKey && e.shiftKey && e.key.toUpperCase() === "I") {
+        e.preventDefault();
+    }
+
+    // Ctrl + Shift + J
+    if (e.ctrlKey && e.shiftKey && e.key.toUpperCase() === "J") {
+        e.preventDefault();
+    }
+
+    // Ctrl + Shift + C
+    if (e.ctrlKey && e.shiftKey && e.key.toUpperCase() === "C") {
+        e.preventDefault();
+    }
+
+    // Ctrl + U
+    if (e.ctrlKey && e.key.toUpperCase() === "U") {
+        e.preventDefault();
+    }
+
+    // Ctrl + S
+    if (e.ctrlKey && e.key.toUpperCase() === "S") {
+        e.preventDefault();
+    }
+
+});
+</script></body>
+</html>
